@@ -28,9 +28,22 @@ class Script_4():
 
         return result
 
+    def subsets_r(self, input_list):
+        result = []
+        r = []
+        index_combinations = list(range(len(input_list)))
+        comb_lists = self.subsets(index_combinations)
+        for sublist in comb_lists:
+            for id in sublist:
+                r.append(input_list[id])
+            result.append(r)
+            r = []
+
+        return result
+
 
 if __name__ == "__main__":
-    listin = [1, 2, 3, 4]
+    listin = [1, 4, 4, 4]
     len_list = len(listin)
-    for i in Script_4().subsets(listin):
+    for i in Script_4().subsets_r(listin):
         print(i)
