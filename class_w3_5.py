@@ -24,12 +24,12 @@ class Script_5():
 
             if sum(i) == num:
 
-                result = i
-                break
+                result.append(i)
+
         return result
 
 
 if __name__ == "__main__":
 
-    listin = [10, 20, 30, 40, 70, 5]
-    print(Script_5().match_sum(55, listin))
+    listin = [10,  20,  10, 40, 50, 60, 70]
+    print(Script_5().match_sum(50, listin))

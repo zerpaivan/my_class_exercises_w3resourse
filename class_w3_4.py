@@ -14,10 +14,12 @@ class Script_4():
         x = 0
 
         while x < len(input_list):
+            for item in input_list:
 
-            for n, i in enumerate(container):
-                for sublist in input_list[x + n:]:
-                    temp.append(i + [sublist])
+                for i in (container):
+                    if item not in i:  # evitar que se repitan items en sublist
+                        if sorted([item] + i) not in temp:
+                            temp.append(sorted([item] + i))
 
             x = x + 1
             result.extend(temp)
